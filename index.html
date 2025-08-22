@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Square is Here</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/icon 2.png">
+</head>
+<body>
+
+  <!-- Canvas للنجوم -->
+  <canvas id="starsCanvas"></canvas>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <header>
+      <h1><span>Square is Here 🎮</span></h1>
+      <p><span>انطلق في مغامرة ممتعة مليئة بالتحديات</span></p>
+      <a href="https://abdocode.itch.io/square-is-here" class="btn" target="_blank"><span>تحميل</span></a>
+    </header>
+
+    <!-- About Section -->
+    <section>
+      <h2><span>عن اللعبة</span></h2>
+      <p><span>استمتع بتحدي نفسك أصعب التحديات وأفضل متعة على مدار 10 أدوار ممتعة</span></p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section>
+      <h2><span>صور من داخل اللعبة</span></h2>
+      <div class="gallery">
+        <img src="images/Level 1.png" alt="Level 1">
+        <img src="images/Level 5.png" alt="Level 5">
+        <img src="images/Maze.png" alt="Maze">
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <span class="prev" id="prevBtn">&#10094;</span>
+    <img id="lightboxImg" src="">
+    <span class="next" id="nextBtn">&#10095;</span>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn">&#8679;</button>
+
+  <footer>
+    <p>© 2025 AbdoCode – جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
