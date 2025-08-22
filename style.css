@@ -246,3 +246,23 @@ h2 {
         background: yellow;
         color: black;
     }
+
+.translate-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px solid yellow;
+    border-radius: 8px;
+    background: black;
+    color: yellow;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+    .translate-btn:hover {
+        background: yellow;
+        color: black;
+    }

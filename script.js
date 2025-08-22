@@ -152,3 +152,45 @@ const observer = new IntersectionObserver((entries) => {
 fadeElements.forEach(el => {
     observer.observe(el);
 });
+
+
+
+const translateBtn = document.getElementById("translateBtn");
+
+// محتوى الموقع باللغتين
+const content = {
+    ar: {
+        heroTitle: "Square is Here 🎮",
+        heroDesc: "انطلق في مغامرة ممتعة مليئة بالتحديات",
+        download: "تحميل",
+        aboutTitle: "عن اللعبة",
+        aboutDesc: "استمتع بتحدي نفسك أصعب التحديات وأفضل متعة على مدار 10 أدوار ممتعة",
+        galleryTitle: "صور من داخل اللعبة",
+        footer: "© 2025 AbdoCode – جميع الحقوق محفوظة"
+    },
+    en: {
+        heroTitle: "Square is Here 🎮",
+        heroDesc: "Embark on a fun adventure full of challenges",
+        download: "Download",
+        aboutTitle: "About the Game",
+        aboutDesc: "Enjoy challenging yourself with 10 fun-filled levels",
+        galleryTitle: "In-Game Screenshots",
+        footer: "© 2025 AbdoCode – All rights reserved"
+    }
+};
+
+let currentLang = "ar"; // اللغة الافتراضية
+
+translateBtn.addEventListener("click", () => {
+    currentLang = currentLang === "ar" ? "en" : "ar"; // تبديل اللغة
+    translateBtn.textContent = currentLang === "ar" ? "EN" : "AR"; // تحديث نص الزر
+
+    // تحديث المحتوى
+    document.querySelector("header h1 span").textContent = content[currentLang].heroTitle;
+    document.querySelector("header p span").textContent = content[currentLang].heroDesc;
+    document.querySelector(".btn span").textContent = content[currentLang].download;
+    document.querySelectorAll("section h2 span")[0].textContent = content[currentLang].aboutTitle;
+    document.querySelectorAll("section p span")[0].textContent = content[currentLang].aboutDesc;
+    document.querySelectorAll("section h2 span")[1].textContent = content[currentLang].galleryTitle;
+    document.querySelector("footer p").textContent = content[currentLang].footer;
+});
